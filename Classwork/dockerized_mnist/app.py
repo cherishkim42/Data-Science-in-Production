@@ -21,6 +21,7 @@ graph = tf.get_default_graph()
 
 @ns.route('/prediction')
 class CNNPrediction(Resource):
+
     """Uploads your data to the CNN"""
     @api.doc(parser=single_parser, description='Upload an mnist image')
     def post(self):

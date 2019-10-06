@@ -1,0 +1,21 @@
+# HW 1
+## For accessing your ECS cluster to deploy your docker version of mnist
+https://us-west-1.console.aws.amazon.com/ecs/home?region=us-west-1#/clusters
+* click on your cluster
+* start new task
+* choose defaults for everything other than your security group. For security group, edit it and click to use
+sg-0cc859968e950867e as the security group.
+* Run the task and wait for it to be running
+* Once its running, click into it to obtain the public ip, and then visit it on port 8000 <ip>:8000
+
+
+# HW 2
+## For accessing your beanstalk deployment
+https://us-west-1.console.aws.amazon.com/elasticbeanstalk/home?region=us-west-1#/applications
+* click on the application in the menu
+* click on actions, restart web server which will boot up your server and give you a url to go to.
+    * If the ip is changed for beanstalk, you can grab the new ip from looking at the server in ec2 menu
+    and then you can go to mongo atlas, your project mnist-beanstalk, network access, and then add the ip. you
+    will have to restart the server again after.
+* to shut it down, go into ec2, mark your server, click on actions, then instance state, and then stop down the server.
+
